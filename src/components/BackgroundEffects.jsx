@@ -1,12 +1,21 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import '../styles/waterfall.css';
+import mountImg from '../assets/mountain.png';
+import '../styles/mountain.css';
+
+let mountainX = 0
 
 const BackgroundEffects = () => {
   const canvasRef = useRef(null);
   const atmosphereRef = useRef(null);
   const rippleFlashRef = useRef(null);
+  const mountImgRef = useRef(new Image());
+  const [themeClass, setThemeClass] = useState('mountain-default');
+
 
   useEffect(() => {
+    mountImgRef.current.src = mountImg;
+
     const canvas = canvasRef.current;
     const atmosphere = atmosphereRef.current;
     const rippleFlash = rippleFlashRef.current;
@@ -23,6 +32,12 @@ const BackgroundEffects = () => {
       H = canvas.height = window.innerHeight;
     };
 
+    // Load mountain image
+
+    mountImgRef.current.onload = () => {
+      console.log("Mountain loaded!");
+    };
+    
     // Initialize fireflies
     const initFireflies = () => {
       fireflies = [];
@@ -83,7 +98,22 @@ const BackgroundEffects = () => {
     // Animation loop
     const render = () => {
       ctx.clearRect(0, 0, W, H);
-      
+      if (mountImgRef.current.complete) {
+        const img = mountImgRef.current;
+        // Maintain aspect ratio: height = width * (imgHeight / imgWidth)
+        const aspect = img.height / img.width;
+        const mWidth = W; 
+        const mHeight = W * aspect;
+    
+      // Draw the image pinned to the bottom
+      ctx.drawImage(img, mountainX, H - mHeight, mWidth, mHeight);
+    
+      // Subtle movement
+      /* mountainX -= 0.05; */
+    
+      // Simple reset if it scrolls too far (or use a seamless loop)
+      if (mountainX <= -W) mountainX = 0; 
+    }
       // Draw fireflies
       fireflies.forEach(drawFirefly);
       
@@ -125,6 +155,12 @@ const BackgroundEffects = () => {
       <div 
         ref={rippleFlashRef}
         className="ripple-flash" 
+        aria-hidden="true"
+      />
+      <canvas 
+        ref={canvasRef}
+        id="waterfallCanvas" 
+        className={themeClass} 
         aria-hidden="true"
       />
     </>
