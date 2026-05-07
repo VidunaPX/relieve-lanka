@@ -2,13 +2,6 @@ import React from 'react';
 import '../styleCompants/Footer.css';
 
 const Footer = () => {
-  const smoothScrollTo = (elementId) => {
-    const element = document.getElementById(elementId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <footer className="relative z-10 py-12 px-6" style={{ background: 'rgba(8,8,6,0.9)', borderTop: '1px solid rgba(255,255,255,0.04)' }}>
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">

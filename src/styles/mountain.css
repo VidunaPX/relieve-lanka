@@ -1,0 +1,73 @@
+/* Mountain Range Styles */
+.mountain-range {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Mountain Parameters */
+:root {
+  /* Mountain Tint Colors */
+  --mountain-tint-primary: #2A1E14;
+  --mountain-tint-secondary: #3B5240;
+  --mountain-tint-golden: #C9A84C;
+  --mountain-tint-grey: #4A5568;
+  
+  /* Mountain Transparency */
+  --mountain-opacity-low: 0.3;
+  --mountain-opacity-medium: 0.5;
+  --mountain-opacity-high: 0.8;
+  --mountain-opacity-max: 1.0;
+  
+  /* Mountain Height */
+  --mountain-height-short: 25%;
+  --mountain-height-medium: 40%;
+  --mountain-height-tall: 60%;
+  --mountain-height-max: 80%;
+  
+  /* Mountain Range Width */
+  --mountain-range-narrow: 60%;
+  --mountain-range-medium: 80%;
+  --mountain-range-wide: 100%;
+  
+  /* Mountain Layer Effects */
+  --mountain-shadow-intensity: 0.4;
+  --mountain-highlight-intensity: 0.2;
+  --mountain-blur-amount: 2px;
+}
+
+/* Mountain Variations */
+.mountain-low-opacity {
+  opacity: var(--mountain-opacity-low);
+  filter: blur(1px);
+}
+
+.mountain-medium-opacity {
+  opacity: var(--mountain-opacity-medium);
+  filter: blur(0.5px);
+}
+
+.mountain-high-opacity {
+  opacity: var(--mountain-opacity-high);
+  filter: blur(0.2px);
+}
+
+.mountain-golden-tint {
+  filter: sepia(0.3) hue-rotate(15deg) brightness(1.1);
+}
+
+.mountain-grey-tint {
+  filter: grayscale(0.5) brightness(0.9);
+}
+
+.mountain-with-shadow {
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+}
+
+.mountain-with-highlight {
+  filter: contrast(1.1) brightness(1.05);
+}

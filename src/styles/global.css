@@ -1,15 +1,19 @@
 /* CSS Variables */
 :root {
-  --accent: #4A9B6E;
-  --accent-bright: #6BCB8E;
-  --accent-deep: #2D6B4A;
+  --accent: #3e407b; 
+  --accent-bright: #75aaff;
+  --accent-deep: #040852;
   --gold: #C9A84C;
   --moss: #3B5240;
   --bark: #2A1E14;
   --earth: #1A120A;
   --canopy: #0F1A0D;
   --crisis: #1E120A;
-  --crisis-warm: #3D2210;
+  --crisis-warm: #96928f;
+  --mountain-base: #2A1E14;
+  --mountain-shadow: #1A120A;
+  --mountain-highlight: #3B5240;
+  --mountain-opacity: 0.7;
 }
 
 /* Base Styles & Resets */

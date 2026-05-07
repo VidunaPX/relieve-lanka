@@ -22,7 +22,7 @@
   z-index: 2;
   pointer-events: none;
   opacity: 0;
-  background: radial-gradient(ellipse at 50% 60%, rgba(74,155,110,0.12), transparent 60%);
+  background: radial-gradient(ellipse at 50% 60%, #040852, transparent 60%);
   transition: opacity 0.15s;
 }
 

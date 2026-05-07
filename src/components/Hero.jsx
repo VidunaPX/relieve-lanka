@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import '../styleCompants/Hero.css';
+import "../styles/global.css"
 
 const Hero = ({ funding = 0, goal = 50000, donors = 0, onShowDonationDetails }) => {
   const [fundPercent, setFundPercent] = useState(0);
@@ -137,7 +138,7 @@ const Hero = ({ funding = 0, goal = 50000, donors = 0, onShowDonationDetails }) 
               <defs>
                 <linearGradient id="ringGradient" x1="0%" y1="0%" x2="100%" y2="100%">
                   <stop offset="0%" stopColor="#4A9B6E"/>
-                  <stop offset="50%" stopColor="#6BCB8E"/>
+                  <stop offset="50%" stopColor="var(--accent-bright"/>
                   <stop offset="100%" stopColor="#8FE4A6"/>
                 </linearGradient>
                 <linearGradient id="ringGradientDanger" x1="0%" y1="0%" x2="100%" y2="100%">

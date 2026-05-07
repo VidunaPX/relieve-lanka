@@ -1,7 +1,7 @@
 .amount-btn {
   position: relative;
-  border: 1.5px solid rgba(74,155,110,0.25);
-  background: rgba(74,155,110,0.04);
+  border: 1.5px solid rgba(82, 74, 155, 0.25);
+  background: rgba(74, 90, 155, 0.04);
   color: #d6cfc2;
   padding: 14px 24px;
   border-radius: 14px;
@@ -17,7 +17,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at center, rgba(74,155,110,0.15), transparent 70%);
+  background: radial-gradient(circle at center, rgba(30, 18, 255, 0.15), transparent 70%);
   opacity: 0;
   transition: opacity 0.4s;
 }
@@ -25,7 +25,7 @@
 .amount-btn:hover {
   border-color: var(--accent);
   transform: translateY(-3px);
-  box-shadow: 0 8px 30px rgba(74,155,110,0.15);
+  box-shadow: 0 8px 30px rgba(74, 119, 155, 0.15);
 }
 
 .amount-btn:hover::before { 
@@ -34,7 +34,7 @@
 
 .amount-btn.selected {
   border-color: var(--accent-bright);
-  background: rgba(74,155,110,0.12);
-  box-shadow: 0 0 25px rgba(74,155,110,0.25), inset 0 0 20px rgba(74,155,110,0.08);
+  background: rgba(74, 119, 155, 0.15);
+  box-shadow: 0 0 25px rgba(145, 193, 255, 0.25), inset 0 0 20px rgba(74, 93, 155, 0.08);
   transform: scale(1.05);
 }
