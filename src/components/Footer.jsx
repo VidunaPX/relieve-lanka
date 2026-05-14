@@ -3,7 +3,7 @@ import '../styleCompants/Footer.css';
 
 const Footer = () => {
   return (
-    <footer className="relative z-10 py-12 px-6" style={{ background: 'rgba(8,8,6,0.9)', borderTop: '1px solid rgba(255,255,255,0.04)' }}>
+    <footer className="relative z-10 py-12 px-6" style={{ background: `linear-gradient('var(--dark-blue)', 'var(--light-blue)')`, borderTop: '1px solid rgba(255,255,255,0.04)' }}>
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="flex items-center gap-2">
           <i className="fa-solid fa-leaf" style={{ color: 'var(--accent)' }}></i>

@@ -21,11 +21,21 @@ const Header = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 px-6 py-4" style={{ background: 'linear-gradient(to bottom, rgba(8,8,6,0.85), transparent)' }}>
-      <div className="max-w-6xl mx-auto flex items-center justify-between">
-        <a href="#" className="flex items-center gap-2 text-white no-underline">
-          <i className="fa-solid fa-leaf text-lg" style={{ color: 'var(--accent)' }}></i>
-          <span className="font-display text-xl tracking-tight">Relieve Lanka</span>
+    // Added 'w-full' and ensured padding 'px-6' handles the breathing room on the edges
+    <nav className="fixed top-0 left-0 w-full z-50 px-20 py-4" style={{ background: 'linear-gradient(to bottom, rgba(8,8,6,0.85), transparent)' }}>
+      {/* CHANGE 1: Removed 'max-w-6xl mx-auto' to allow the content to hit the left/right edges.
+          CHANGE 2: Kept 'justify-between' so the logo stays left and the nav links stay right.
+      */}
+      <div className="w-full flex items-center justify-between">
+        
+        {/* This anchor tag contains your logo and name, now pinned to the left edge of the padding */}
+        <a href="#" className="flex items-center gap-2 text-white no-underline" onClick={(e) => { e.preventDefault(); window.scrollTo({top: 0, behavior: 'smooth'}); }}>
+          <img 
+            src="relieveLankalogo.png" 
+            alt="Relieve Lanka Logo" 
+            className="h-16 w-16 md:h-18 md:w-18 object-contain" // Adjusted size for better fit in header
+          />
+          <span className="font-display text-xl tracking-tight uppercase">Relieve Lanka</span>
         </a>
         
         <div className="hidden md:flex items-center gap-8">
@@ -45,6 +55,7 @@ const Header = () => {
         </button>
       </div>
       
+      {/* Mobile Menu remains centered for better UX */}
       <div 
         id="mobileMenu" 
         className={`${isMobileMenuOpen ? 'flex' : 'hidden'} md:hidden mt-4 pb-4 flex-col gap-4 items-center`}

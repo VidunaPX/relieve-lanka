@@ -5,18 +5,18 @@ const Future = () => {
   const futureInitiatives = [
     {
       icon: 'fa-shield-halved',
-      title: 'Flood-Resilient Schools',
-      description: 'Elevated structures with drainage systems designed for 50-year flood events'
+      title: 'Solar-Powered Classrooms',
+      description: 'Equipping schools with solar panels to ensure learning never stops, providing clean and consistent electricity regardless of fuel shortages or grid failures.'
     },
     {
       icon: 'fa-people-group',
-      title: 'Community Response Teams',
-      description: '500+ trained volunteers across 12 districts for rapid local response'
+      title: 'High-Tech Learning Labs',
+      description: 'Closing the digital divide by providing computers and modern tools, giving rural students the same science and tech resources as their urban peers.'
     },
     {
       icon: 'fa-graduation-cap',
-      title: 'Education Endowment',
-      description: 'Long-term fund ensuring no student drops out due to disaster-related poverty'
+      title: '24/7 Learning Support',
+      description: 'Upgrading school infrastructure into community hubs that support learning at all hours, eliminating the locational barriers for students traveling long distances.'
     }
   ];
 
@@ -27,11 +27,11 @@ const Future = () => {
           <i className="fa-solid fa-sun mr-1"></i> The Future
         </span> */}
         <h2 className="font-display text-3xl md:text-5xl text-white mb-6 leading-tight">
-          Sustainable Recovery.<br />
-          <span style={{ color: 'var(--gold)' }}>A Forest That Keeps Growing.</span>
+          Sustainable Recovery <br />
+          <span style={{ color: 'var(--gold)' }}> A Future Without Barriers. </span>
         </h2>
         <p className="text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-12" style={{ color: 'rgba(214,207,194,0.45)' }}>
-          Beyond emergency relief, we're building flood-resistant infrastructure, training community disaster response teams, and establishing education endowments. The forest doesn't stop growing — and neither does our commitment.
+          Beyond immediate grants, we are building the foundation for a permanent educational ecosystem in Yahangala. We don't just want students to return to school; we want them to return to a superior learning environment that is resilient to future crises. By investing in resilient infrastructure and modern technology, we ensure that the next generation of rural talent has the tools to break the cycle of poverty for good.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
           {futureInitiatives.map((initiative, index) => (

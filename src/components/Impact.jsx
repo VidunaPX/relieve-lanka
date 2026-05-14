@@ -41,7 +41,7 @@ const Impact = () => {
             Our promise.<br />to the community. {/* Add scrolling test which fades in and out - */}
           </h2>
           <p className="text-base leading-relaxed mb-8" style={{ color: 'rgba(214,207,194,0.45)' }}>
-            It is a way to jumpstart a community and accelerate its own growth. We are committed to ensuring that for students in the most vulnerable areas, merit becomes the only determinant in post-secondary education. By removing the financial barriers of transport, rent, and tuition, we promise to level the playing field between rural scholars and their urban peer
+            It is a way to jumpstart a community and accelerate its own growth. We are committed to ensuring that for students in the most vulnerable areas, merit becomes the only determinant in post-secondary education. By removing the financial barriers of transport, rent, and tuition, we promise to level the playing field between rural scholars and their urban peer </p>
           <div className="grid grid-cols-2 gap-4">
             {impactStats.map((stat, index) => (
               <div key={index} className="stat-card">

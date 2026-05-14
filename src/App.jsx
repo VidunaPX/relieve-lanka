@@ -85,7 +85,7 @@ const App = () => {
       {/* Footer */}
       <Footer />
       
-      {/* Floating Donate Button */}
+      {/* Floating Donate Button 
       <button 
         className="floating-donate" 
         onClick={() => {
@@ -97,7 +97,7 @@ const App = () => {
         aria-label="Scroll to donate section"
       >
         <i className="fa-solid fa-droplet"></i>
-      </button>
+      </button>*/}
     </div>
   );
 };
